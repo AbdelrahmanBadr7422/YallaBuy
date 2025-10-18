@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-auth-nav',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './auth-nav.html',
-  styleUrl: './auth-nav.css'
+  styleUrl: './auth-nav.css',
 })
 export class AuthNav {
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
